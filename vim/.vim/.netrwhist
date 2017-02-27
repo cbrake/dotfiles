@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server'
+let g:netrw_dirhist_2='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server/accounts'
+let g:netrw_dirhist_3='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup'
+let g:netrw_dirhist_4='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server'
+let g:netrw_dirhist_5='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server/accounts'
+let g:netrw_dirhist_6='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server'
+let g:netrw_dirhist_7='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup'
+let g:netrw_dirhist_8='/scratch/pointwatch/user-portal-meteor-1.4-take-2/imports/startup/server'
+let g:netrw_dirhist_9='/scratch/go/src/pointwatch.com/gw'
