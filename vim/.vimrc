@@ -79,6 +79,10 @@ au FileType lisp set cpoptions-=m
 au FileType lisp set shiftwidth=1
 au FileType lisp set foldmethod=indent
 
+"autocmd FileType javascript set formatprg=prettier\ --stdin
+"autocmd BufWritePre *.js :normal gggqG
+"autocmd BufWritePre *.js exe "normal! gggqG\<C-o>\<C-o>"
+
 au FileType sh set ts=2 sw=2 expandtab nosmartindent autoindent
 
 autocmd BufRead,BufNewFile *.rb set ts=2 sw=2 expandtab
@@ -100,6 +104,8 @@ autocmd BufRead,BufNewFile *.rhtml set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.html set ts=2 sw=2 expandtab
 
 autocmd BufRead,BufNewFile *.cst set ts=2 sw=2 expandtab
+
+autocmd BufRead,BufNewFile *.yml set ts=2 sw=2 expandtab
 
 autocmd BufRead,BufNewFile *.py set ts=4 sw=4 expandtab softtabstop=4
 autocmd BufRead,BufNewFile *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
