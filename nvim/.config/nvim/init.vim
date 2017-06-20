@@ -20,6 +20,19 @@ let g:jsx_ext_required = 0
 let g:go_fmt_command = "goimports"
 let g:elm_format_autosave = 1
 
+let g:neoformat_enabled_c = ['astyle']
+let g:neoformat_c_clang = {
+            \ 'exe': 'clang-format',
+            \ 'args': ['--style="{BasedOnStyle: llvm, IndentWidth: 8, UseTab: Always, BreakBeforeBraces: Linux, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false}"'],
+            \ 'stdin': 1,
+            \ }
+
+let g:neoformat_c_astyle = {
+            \ 'exe': 'astyle',
+            \ 'args': ['--mode=c', '--style=linux', '--indent=tab'],
+            \ 'stdin': 1,
+            \ }
+
 autocmd BufWritePre *.js,*.jsx,*.sh Neoformat
 autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
