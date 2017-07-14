@@ -1,4 +1,5 @@
 nvim/.local/share/nvim/plugged/
 nvim/.local/share/nvim/shada/
 nvim/.local/share/nvim/site/autoload/plug.vim.old
+nvim/.local/share/nvim/swap/
 
