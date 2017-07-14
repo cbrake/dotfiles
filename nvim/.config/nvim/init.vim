@@ -16,11 +16,14 @@ Plug 'elmcast/elm-vim'
 " Initialize plugin system
 call plug#end()
 
+" autoformatting notes
+" using shfmt (go app) for shell formatting
+
 let g:jsx_ext_required = 0
 let g:go_fmt_command = "goimports"
 let g:elm_format_autosave = 1
 
-let g:neoformat_enabled_c = ['astyle']
+" let g:neoformat_enabled_c = ['clang']
 let g:neoformat_c_clang = {
             \ 'exe': 'clang-format',
             \ 'args': ['--style="{BasedOnStyle: llvm, IndentWidth: 8, UseTab: Always, BreakBeforeBraces: Linux, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false}"'],
@@ -38,6 +41,7 @@ autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
 autocmd BufRead,BufNewFile *.yml set ts=2 sw=2 expandtab
 autocmd FileType sh set ts=2 sw=2 expandtab nosmartindent autoindent
+autocmd BufRead,BufNewFile *.c, *.h set ts=8 sw=8 noexpandtab
 
 let mapleader=","
 nmap <tab> :bn<cr>
