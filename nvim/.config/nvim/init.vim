@@ -41,7 +41,7 @@ autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
 autocmd BufRead,BufNewFile *.yml set ts=2 sw=2 expandtab
 autocmd FileType sh set ts=2 sw=2 expandtab nosmartindent autoindent
-autocmd BufRead,BufNewFile *.c, *.h set ts=8 sw=8 noexpandtab
+autocmd BufRead,BufNewFile *.c,*.h set ts=8 sw=8 noexpandtab
 
 let mapleader=","
 nmap <tab> :bn<cr>
