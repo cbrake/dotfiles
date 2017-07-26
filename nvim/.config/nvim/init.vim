@@ -52,4 +52,8 @@ nmap <leader>f :NERDTreeToggle <cr>
 
 set hlsearch
 
+" tab filename expansion
+set wildmode=longest,list,full
+set wildmenu
+
 
