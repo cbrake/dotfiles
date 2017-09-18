@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'elmcast/elm-vim'
+Plug 'stevearc/vim-arduino'
 
 " Initialize plugin system
 call plug#end()
