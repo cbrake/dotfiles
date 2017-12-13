@@ -13,6 +13,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'elmcast/elm-vim'
 Plug 'stevearc/vim-arduino'
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -57,4 +58,4 @@ set hlsearch
 set wildmode=longest,list,full
 set wildmenu
 
-
+nmap <F8> :TagbarToggle<CR>
