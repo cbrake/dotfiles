@@ -13,6 +13,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'elmcast/elm-vim'
 Plug 'stevearc/vim-arduino'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'vim-syntastic/syntastic'
 
 " Initialize plugin system
 call plug#end()
@@ -21,7 +24,10 @@ call plug#end()
 " using shfmt (go app) for shell formatting
 
 let g:jsx_ext_required = 0
+
 let g:go_fmt_command = "goimports"
+let g:go_addtags_transform = 'camelcase'
+
 let g:elm_format_autosave = 1
 
 " let g:neoformat_enabled_c = ['clang']
@@ -40,9 +46,12 @@ let g:neoformat_c_astyle = {
 autocmd BufWritePre *.js,*.jsx,*.sh Neoformat
 autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
+autocmd BufRead,BufNewFile *.m set ts=4 sw=4 expandtab
 autocmd BufRead,BufNewFile *.yml set ts=2 sw=2 expandtab
 autocmd FileType sh set ts=2 sw=2 expandtab nosmartindent autoindent
 autocmd BufRead,BufNewFile *.c,*.h set ts=8 sw=8 noexpandtab
+
+au BufNewFile,BufRead *.py set ts=4 softtabstop=4  sw=4 textwidth=79 expandtab  autoindent fileformat=unix
 
 let mapleader=","
 nmap <tab> :bn<cr>
@@ -57,4 +66,13 @@ set hlsearch
 set wildmode=longest,list,full
 set wildmenu
 
+" syntastic
+" was installed for rust
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
