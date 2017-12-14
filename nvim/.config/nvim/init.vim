@@ -16,6 +16,7 @@ Plug 'stevearc/vim-arduino'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'majutsushi/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -76,3 +77,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+nmap <F8> :TagbarToggle<CR>
