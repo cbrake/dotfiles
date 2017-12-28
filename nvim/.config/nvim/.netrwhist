@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/scratch/pointwatch/user-portal'
-let g:netrw_dirhist_2='/scratch/pointwatch/user-portal/server'
-let g:netrw_dirhist_3='/scratch/pointwatch/user-portal'
-let g:netrw_dirhist_4='/scratch/pointwatch/user-portal/server'
-let g:netrw_dirhist_5='/scratch/pointwatch/user-portal'
-let g:netrw_dirhist_6='/scratch/pointwatch/user-portal/server'
-let g:netrw_dirhist_7='/scratch/pointwatch/user-portal/imports/ui/components'
