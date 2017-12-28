@@ -1,25 +1,28 @@
-" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-call plug#begin('~/.local/share/nvim/plugged')
+" must install minpac manually:
+" https://github.com/k-takata/minpac
+" call minpac#update()
+" call minpac#clean()
+" :messages (can be used to view minpac log)
 
-" Make sure you use single quotes
+packadd minpac
+call minpac#init()
 
-Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'sbdchd/neoformat'
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fholgado/minibufexpl.vim'
-Plug 'elmcast/elm-vim'
-Plug 'stevearc/vim-arduino'
-Plug 'vim-scripts/indentpython.vim'
-Plug 'rust-lang/rust.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'majutsushi/tagbar'
+call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" Initialize plugin system
-call plug#end()
+call minpac#add('fatih/vim-go')
+"call minpac#add('nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('mxw/vim-jsx')
+call minpac#add('sbdchd/neoformat')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('ctrlpvim/ctrlp.vim')
+call minpac#add('fholgado/minibufexpl.vim')
+call minpac#add('elmcast/elm-vim')
+call minpac#add('stevearc/vim-arduino')
+call minpac#add('vim-scripts/indentpython.vim')
+call minpac#add('rust-lang/rust.vim')
+call minpac#add('vim-syntastic/syntastic')
+call minpac#add('majutsushi/tagbar')
 
 " autoformatting notes
 " using shfmt (go app) for shell formatting
