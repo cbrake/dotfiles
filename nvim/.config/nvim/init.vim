@@ -23,6 +23,7 @@ call minpac#add('vim-scripts/indentpython.vim')
 call minpac#add('rust-lang/rust.vim')
 call minpac#add('vim-syntastic/syntastic')
 call minpac#add('majutsushi/tagbar')
+call minpac#add('tpope/vim-fugitive')
 
 " autoformatting notes
 " using shfmt (go app) for shell formatting
@@ -83,3 +84,5 @@ set wildmenu
 "let g:syntastic_check_on_wq = 0
 
 nmap <F8> :TagbarToggle<CR>
+hi DiffText cterm=bold ctermbg=11 gui=bold guibg=Red
+
