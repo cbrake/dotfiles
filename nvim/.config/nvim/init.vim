@@ -31,7 +31,7 @@ call minpac#add('rust-lang/rust.vim')
 " uses eslint with javascript to highlight problems
 " npm install eslint --save-dev
 " ./node_modules/.bin/eslint --init
-call minpac#add('vim-syntastic/syntastic')
+"call minpac#add('vim-syntastic/syntastic')
 call minpac#add('majutsushi/tagbar')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('posva/vim-vue')
@@ -64,6 +64,7 @@ let g:neoformat_c_astyle = {
 
 autocmd BufWritePre,TextChanged,InsertLeave *.sh Neoformat
 
+let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 let g:prettier#config#single_quote = 'false'
 let g:prettier#config#bracket_spacing = 'true'
@@ -124,3 +125,7 @@ hi DiffText cterm=bold ctermbg=11 gui=bold guibg=Red
 
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+
+set backupcopy=yes
+
+
