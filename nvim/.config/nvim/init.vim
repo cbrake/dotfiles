@@ -21,6 +21,8 @@ call minpac#add('mxw/vim-jsx')
 
 " neoformat is use to format shell files
 call minpac#add('sbdchd/neoformat')
+" go get -u mvdan.cc/sh/cmd/shfmt
+
 call minpac#add('scrooloose/nerdtree')
 call minpac#add('ctrlpvim/ctrlp.vim')
 " <c-f> and <c-b> to cycle between modes (files, buffers, etc)
