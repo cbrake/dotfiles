@@ -68,7 +68,7 @@ let g:neoformat_c_astyle = {
             \ 'stdin': 1,
             \ }
 
-autocmd BufWritePre,TextChanged,InsertLeave *.sh Neoformat
+autocmd BufWritePre,TextChanged,InsertLeave init,*.sh Neoformat
 
 autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
