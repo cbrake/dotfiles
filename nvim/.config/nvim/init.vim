@@ -15,15 +15,12 @@ call minpac#add('fatih/vim-go')
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mxw/vim-jsx')
 
-" uses prettier to automatically format js code
-" npm install -g prettier
-" call minpac#add('prettier/vim-prettier')
-
-" neoformat is use to format shell files
 call minpac#add('sbdchd/neoformat')
+" neoformat is use to format shell files
 " go get -u mvdan.cc/sh/cmd/shfmt
 
 call minpac#add('scrooloose/nerdtree')
+
 call minpac#add('ctrlpvim/ctrlp.vim')
 " <c-f> and <c-b> to cycle between modes (files, buffers, etc)
 " <c-d> to switch between filename only search instead of full path
@@ -45,8 +42,8 @@ call minpac#add('tpope/vim-fugitive')
 call minpac#add('w0rp/ale')
 " npm install -g prettier eslint typescript
 " tsserver is required for ALEGotToDefinition
-" ,ad -- go to definition, Ctrl-o goes back
-
+" <leader>d -- go to definition, Ctrl-o goes back
+" would be nice to map this to ctrl-] like most other languages
 
 let g:jsx_ext_required = 0
 
@@ -106,6 +103,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
+\   'markdown': ['prettier'],
 \}
 
 let g:ale_fix_on_save = 1
