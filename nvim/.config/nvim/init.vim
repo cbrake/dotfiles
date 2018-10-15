@@ -66,7 +66,7 @@ let g:neoformat_c_astyle = {
             \ }
 
 " trying to move shfmt to ALE but not working yet
-autocmd BufWritePre,TextChanged,InsertLeave init,*.sh Neoformat
+autocmd BufWritePre init,*.sh Neoformat
 
 autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.elm set ts=4 sw=4 expandtab
