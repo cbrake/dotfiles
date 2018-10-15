@@ -65,6 +65,7 @@ let g:neoformat_c_astyle = {
             \ 'stdin': 1,
             \ }
 
+" trying to move shfmt to ALE but not working yet
 autocmd BufWritePre,TextChanged,InsertLeave init,*.sh Neoformat
 
 autocmd BufRead,BufNewFile *.js,*.jsx set ts=2 sw=2 expandtab
@@ -100,11 +101,14 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 "================================================
 " ale stuff
+" bash and ansible formatters are not working yet
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
 \   'markdown': ['prettier'],
 \   'yaml': ['prettier'],
+\   'bash': ['shfmt'],
+\   'ansible': ['ansible-lint'],
 \}
 
 let g:ale_fix_on_save = 1
