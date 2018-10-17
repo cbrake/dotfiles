@@ -32,6 +32,7 @@ call minpac#add('elmcast/elm-vim')
 call minpac#add('stevearc/vim-arduino')
 call minpac#add('vim-scripts/indentpython.vim')
 call minpac#add('rust-lang/rust.vim')
+call minpac#add('kergoth/vim-bitbake')
 
 " uses eslint with javascript to highlight problems
 " npm install eslint --save-dev
