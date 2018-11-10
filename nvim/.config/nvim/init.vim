@@ -11,6 +11,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('fatih/vim-go')
 " run GoInstallBinaries
+" go get -u github.com/posener/complete/gocomplete
 
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mxw/vim-jsx')
@@ -29,6 +30,10 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 
 call minpac#add('fholgado/minibufexpl.vim')
 call minpac#add('elmcast/elm-vim')
+" npm install -g elm-test
+" npm install -g elm-oracle
+" npm install -g elm-format
+
 call minpac#add('stevearc/vim-arduino')
 call minpac#add('vim-scripts/indentpython.vim')
 call minpac#add('rust-lang/rust.vim')
@@ -45,6 +50,8 @@ call minpac#add('w0rp/ale')
 " tsserver is required for ALEGotToDefinition
 " <leader>d -- go to definition, Ctrl-o goes back
 " would be nice to map this to ctrl-] like most other languages
+
+call minpac#add('kylef/apiblueprint.vim')
 
 let g:jsx_ext_required = 0
 
