@@ -113,6 +113,7 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'eslint'],
+\   'json': ['prettier'],
 \   'markdown': ['prettier'],
 \   'yaml': ['prettier'],
 \   'bash': ['shfmt'],
