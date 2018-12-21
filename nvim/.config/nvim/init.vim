@@ -11,6 +11,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 call minpac#add('fatih/vim-go')
 " run GoInstallBinaries
+" occasionally run GoUpdateBinaries
 " go get -u github.com/posener/complete/gocomplete
 
 call minpac#add('pangloss/vim-javascript')
