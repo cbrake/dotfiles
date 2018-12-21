@@ -32,6 +32,7 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 call minpac#add('fholgado/minibufexpl.vim')
 call minpac#add('elmcast/elm-vim')
 " npm install -g elm-test elm-oracle elm-format
+call minpac#add('bitterjug/vim-tagbar-ctags-elm')
 
 call minpac#add('stevearc/vim-arduino')
 call minpac#add('vim-scripts/indentpython.vim')
