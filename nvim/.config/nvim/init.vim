@@ -1,3 +1,4 @@
+" ==================================================
 " must install minpac manually:
 " https://github.com/k-takata/minpac
 " call minpac#update()
@@ -52,6 +53,12 @@ call minpac#add('w0rp/ale')
 " would be nice to map this to ctrl-] like most other languages
 
 call minpac#add('kylef/apiblueprint.vim')
+
+" vim-lastplace remembers where you were in file during last edit
+call minpac#add('farmergreg/vim-lastplace')
+
+" end minpac stuff
+" =======================================================
 
 let g:jsx_ext_required = 0
 
