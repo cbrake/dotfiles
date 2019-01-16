@@ -141,6 +141,9 @@ let g:ale_lint_on_text_changed = 0
 
 set backupcopy=yes
 
+"enable mouse
+set mouse=a
+
 "=================================================================================================
 "nvim notes
 " :nmap for normal mode mappings
