@@ -57,6 +57,9 @@ call minpac#add('kylef/apiblueprint.vim')
 " vim-lastplace remembers where you were in file during last edit
 call minpac#add('farmergreg/vim-lastplace')
 
+" required to fix highlight colors with solaraized color scheme
+call minpac#add('matsen/nvim-colors-solarized')
+
 " end minpac stuff
 " =======================================================
 
@@ -149,3 +152,8 @@ set mouse=a
 " :nmap for normal mode mappings
 " :vmap for visual mode mappings
 " :imap for insert mode mappings
+
+" config for nvim-colors-solarized
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=light " or light
+colorscheme solarized
