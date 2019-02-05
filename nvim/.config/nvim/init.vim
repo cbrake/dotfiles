@@ -48,6 +48,7 @@ call minpac#add('tpope/vim-fugitive')
 
 call minpac#add('w0rp/ale')
 " npm install -g prettier eslint typescript
+" pacman -S jq (autoformat json)
 " tsserver is required for ALEGotToDefinition
 " <leader>d -- go to definition, Ctrl-o goes back
 " would be nice to map this to ctrl-] like most other languages
