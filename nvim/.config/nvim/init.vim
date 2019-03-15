@@ -1,7 +1,7 @@
 " ==================================================
 " must install minpac manually:
 " https://github.com/k-takata/minpac
-" call minpac#update()
+" call minpac#update() (run this occasionally to update vim plugins)
 " call minpac#clean()
 " :messages (can be used to view minpac log)
 
