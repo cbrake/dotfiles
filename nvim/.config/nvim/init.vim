@@ -68,6 +68,7 @@ let g:jsx_ext_required = 0
 
 let g:go_fmt_command = "goimports"
 let g:go_addtags_transform = 'camelcase'
+let g:go_def_mode = 'godef'
 
 let g:elm_format_autosave = 1
 
