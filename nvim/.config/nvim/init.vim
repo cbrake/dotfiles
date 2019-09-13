@@ -32,8 +32,9 @@ call minpac#add('ctrlpvim/ctrlp.vim')
 
 call minpac#add('fholgado/minibufexpl.vim')
 call minpac#add('elmcast/elm-vim')
+call minpac#add('antew/vim-elm-language-server')
 " npm install -g elm-test elm-oracle elm-format
-call minpac#add('bitterjug/vim-tagbar-ctags-elm')
+" call minpac#add('bitterjug/vim-tagbar-ctags-elm')
 
 call minpac#add('stevearc/vim-arduino')
 call minpac#add('vim-scripts/indentpython.vim')
@@ -148,6 +149,9 @@ set backupcopy=yes
 
 "enable mouse
 set mouse=a
+
+" disable ALE with C/C++
+let g:ale_linters = {'c': [], 'cpp': [], 'c++': []}
 
 "=================================================================================================
 "nvim notes
