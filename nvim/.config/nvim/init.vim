@@ -62,6 +62,8 @@ call minpac#add('farmergreg/vim-lastplace')
 " required to fix highlight colors with solaraized color scheme
 call minpac#add('matsen/nvim-colors-solarized')
 
+call minpac#add('vim-scripts/a.vim')
+
 " end minpac stuff
 " =======================================================
 
