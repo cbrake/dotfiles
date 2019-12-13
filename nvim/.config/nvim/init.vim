@@ -64,6 +64,8 @@ call minpac#add('matsen/nvim-colors-solarized')
 
 call minpac#add('vim-scripts/a.vim')
 
+call minpac#add('dart-lang/dart-vim-plugin')
+
 " end minpac stuff
 " =======================================================
 
@@ -153,7 +155,12 @@ set backupcopy=yes
 set mouse=a
 
 " disable ALE with C/C++
-let g:ale_linters = {'c': [], 'cpp': [], 'c++': []}
+let g:ale_linters = {'c': [], 'cpp': [], 'c++': [], 'go': ['gometalinter']}
+
+" Dart stuff
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
 
 "=================================================================================================
 "nvim notes
