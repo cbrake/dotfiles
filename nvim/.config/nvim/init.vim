@@ -155,7 +155,7 @@ set backupcopy=yes
 set mouse=a
 
 " disable ALE with C/C++
-let g:ale_linters = {'c': [], 'cpp': [], 'c++': [], 'go': ['gometalinter']}
+let g:ale_linters = {'c': [], 'cpp': [], 'c++': [], 'go': ['golint', 'go build']}
 
 " Dart stuff
 let dart_html_in_string=v:true
