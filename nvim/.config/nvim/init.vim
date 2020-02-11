@@ -21,6 +21,8 @@ call minpac#add('mxw/vim-jsx')
 call minpac#add('sbdchd/neoformat')
 " neoformat is use to format shell files
 " go get -u mvdan.cc/sh/cmd/shfmt
+" shellcheck is used to lint shell files
+" https://github.com/koalaman/shellcheck#installing
 
 call minpac#add('scrooloose/nerdtree')
 
@@ -123,6 +125,8 @@ hi DiffText cterm=bold ctermbg=11 gui=bold guibg=Red
 
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+nmap <silent> <leader>aj :ALENext<cr>
+nmap <silent> <leader>ak :ALEPrevious<cr>
 
 "================================================
 " ale stuff
