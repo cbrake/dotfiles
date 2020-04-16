@@ -176,3 +176,7 @@ let g:dart_format_on_save = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=light " or light
 colorscheme solarized
+
+" this allows you to move cursor past last cursor.
+" see: https://keleshev.com/my-book-writing-setup/
+set virtualedit=all
