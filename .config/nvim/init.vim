@@ -179,4 +179,4 @@ colorscheme solarized
 
 " this allows you to move cursor past last cursor.
 " see: https://keleshev.com/my-book-writing-setup/
-set virtualedit=all
+" set virtualedit=all
