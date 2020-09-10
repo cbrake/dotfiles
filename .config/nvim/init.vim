@@ -14,6 +14,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " coc setup
 " :CocInstall coc-json coc-tsserver  coc-css coc-eslint coc-git coc-go coc-html coc-python coc-sh coc-yaml coc-cmake
 " extensions are installed at ~/.config/coc/extensions/node_modules/
+" sudo npm install -g @elm-tooling/elm-language-server
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
 " call minpac#add('fatih/vim-go')
@@ -31,6 +32,8 @@ call minpac#add('sbdchd/neoformat')
 " https://github.com/koalaman/shellcheck#installing
 
 call minpac#add('scrooloose/nerdtree')
+
+call minpac#add('itchyny/lightline.vim')
 
 call minpac#add('ctrlpvim/ctrlp.vim')
 " <c-f> and <c-b> to cycle between modes (files, buffers, etc)
