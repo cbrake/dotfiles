@@ -12,7 +12,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 
 " =================================================
 " coc setup
-" :CocInstall coc-json coc-tsserver  coc-css coc-eslint coc-git coc-go coc-html coc-python coc-sh coc-yaml coc-cmake
+" :CocInstall coc-json coc-tsserver  coc-css coc-eslint coc-git coc-go coc-html coc-python coc-sh coc-yaml coc-cmake coc-prettier
 " extensions are installed at ~/.config/coc/extensions/node_modules/
 " sudo npm install -g @elm-tooling/elm-language-server
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
