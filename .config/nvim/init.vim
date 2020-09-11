@@ -29,6 +29,8 @@ call minpac#add('andys8/vim-elm-syntax', { 'for': ['elm'] })
 "call minpac#add('pangloss/vim-javascript')
 "call minpac#add('mxw/vim-jsx')
 
+call minpac#add('MaxMEllon/vim-jsx-pretty')
+
 call minpac#add('sbdchd/neoformat')
 " neoformat is use to format shell files
 " go get -u mvdan.cc/sh/cmd/shfmt
