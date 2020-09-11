@@ -10,6 +10,8 @@ call minpac#init()
 
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+call minpac#add('liuchengxu/vista.vim')
+
 " =================================================
 " coc setup
 " :CocInstall coc-json coc-tsserver  coc-css coc-eslint coc-git coc-go coc-html coc-python coc-sh coc-yaml coc-cmake coc-prettier
@@ -40,7 +42,8 @@ call minpac#add('sbdchd/neoformat')
 
 call minpac#add('scrooloose/nerdtree')
 
-call minpac#add('itchyny/lightline.vim')
+"call minpac#add('itchyny/lightline.vim')
+call minpac#add('vim-airline/vim-airline')
 
 call minpac#add('ctrlpvim/ctrlp.vim')
 " <c-f> and <c-b> to cycle between modes (files, buffers, etc)
@@ -120,6 +123,8 @@ nmap <s-tab> :bp<cr>
 nmap <leader>b :CtrlPBuffer <cr>
 nmap <leader>p :CtrlP <cr>
 nmap <leader>f :NERDTreeToggle <cr>
+nmap <leader>v :Vista!! <cr>
+nmap <leader>d :CocDiagnostics <cr>
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
@@ -155,9 +160,9 @@ let g:ale_fix_on_save = 1
 " Enable completion where available.
 " let g:ale_completion_enabled = 1
 let g:ale_javascript_prettier_use_local_config = 1
-nmap <silent> <leader>aj :ALENext<cr>
-nmap <silent> <leader>ak :ALEPrevious<cr>
-nmap <silent> <leader>d :ALEGoToDefinition<cr>
+" nmap <silent> <leader>aj :ALENext<cr>
+" nmap <silent> <leader>ak :ALEPrevious<cr>
+" nmap <silent> <leader>d :ALEGoToDefinition<cr>
 
 "only lint on save
 let g:ale_lint_on_save = 1
@@ -322,10 +327,10 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-set statusline=
-set statusline^=%{coc#status()}
-set statusline+=%#LineNr#
-set statusline+=\ %f
+"set statusline=
+"set statusline^=%{coc#status()}
+"set statusline+=%#LineNr#
+"set statusline+=\ %f
 
 
 " Mappings for CoCList
@@ -347,3 +352,73 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 autocmd BufWritePre *.go :call CocAction('organizeImport')
+
+
+"=============================================================
+" Vista VIM stuff
+
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
+
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
+
+"=============================================================
+" Lightline status bar config
+
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'readonly', 'filename', 'modified', 'method' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
+
+
+autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+set noshowmode
+
+
+"=============================================================
+" vim-go disable stuff that interfers with coc
+
+" disable vim-go keybindings in favor of coc
+let g:go_def_mapping_enabled = 0
+let g:go_doc_keywordprg_enabled = 0
+let g:go_textobj_enabled = 0
+let g:go_gopls_enabled = 0
+"type info
+let g:go_auto_type_info = 0
+" let g:go_def_mode='gopls'
+" let g:go_info_mode='gopls'
+" let g:go_def_mode='guru'
+" let g:go_info_mode='guru'
+" DISABLE gopls since coc starts it 
+let g:go_term_enabled = 1
+" let g:go_term_enabled = 0
+let g:go_term_mode='vsplit'
+let g:go_term_close_on_exit = 0
+let g:go_list_autoclose = 1
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_command = "goimports"
+let g:go_list_type = "quickfix"
+let g:go_list_type_commands={"GoTestFunc!": "", "GoTestFunc": ""}
+let g:go_test_show_name=1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 0
+let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_format_strings = 1
+
