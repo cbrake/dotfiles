@@ -19,6 +19,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 
 " call minpac#add('elm-tooling/elm-vim')
+call minpac#add('andys8/vim-elm-syntax', { 'for': ['elm'] }) 
 
 " call minpac#add('fatih/vim-go')
 " run GoInstallBinaries
