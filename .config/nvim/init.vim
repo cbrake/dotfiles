@@ -15,20 +15,24 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " :CocInstall coc-json coc-tsserver  coc-css coc-eslint coc-git coc-go coc-html coc-python coc-sh coc-yaml coc-cmake coc-prettier
 " extensions are installed at ~/.config/coc/extensions/node_modules/
 " sudo npm install -g @elm-tooling/elm-language-server
+" --unsafe-perm may be required for npm 
 call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+
+" call minpac#add('elm-tooling/elm-vim')
 
 " call minpac#add('fatih/vim-go')
 " run GoInstallBinaries
 " occasionally run GoUpdateBinaries
 " go get -u github.com/posener/complete/gocomplete
 
-call minpac#add('pangloss/vim-javascript')
-call minpac#add('mxw/vim-jsx')
+"call minpac#add('pangloss/vim-javascript')
+"call minpac#add('mxw/vim-jsx')
 
 call minpac#add('sbdchd/neoformat')
 " neoformat is use to format shell files
 " go get -u mvdan.cc/sh/cmd/shfmt
-" shellcheck is used to lint shell files
+" shellcheck is used to lint shell files (I don't think this is working any
+" more -- used to use ALE)
 " https://github.com/koalaman/shellcheck#installing
 
 call minpac#add('scrooloose/nerdtree')
@@ -46,8 +50,8 @@ call minpac#add('fholgado/minibufexpl.vim')
 " call minpac#add('bitterjug/vim-tagbar-ctags-elm')
 
 call minpac#add('stevearc/vim-arduino')
-call minpac#add('vim-scripts/indentpython.vim')
-call minpac#add('rust-lang/rust.vim')
+" call minpac#add('vim-scripts/indentpython.vim')
+" call minpac#add('rust-lang/rust.vim')
 call minpac#add('kergoth/vim-bitbake')
 
 " uses eslint with javascript to highlight problems
@@ -338,3 +342,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+autocmd BufWritePre *.go :call CocAction('organizeImport')
