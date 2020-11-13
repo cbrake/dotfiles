@@ -177,6 +177,8 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=light " or light
 colorscheme solarized
 
+set termguicolors
+
 " this allows you to move cursor past last cursor.
 " see: https://keleshev.com/my-book-writing-setup/
 " set virtualedit=all
