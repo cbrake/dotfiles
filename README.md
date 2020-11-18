@@ -4,6 +4,7 @@ Using git setup detailed [here](https://drewdevault.com/2019/12/30/dotfiles.html
 
 ## To initialize in existing home dir
 
+- `cd ~`
 - `git init`
 - `git remote add origin https://github.com/cbrake/dotfiles.git` (`git@github.com:cbrake/dotfiles.git` if you are cbrake :-) )
 - `git fetch`
