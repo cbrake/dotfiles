@@ -6,7 +6,8 @@ Using git setup detailed [here](https://drewdevault.com/2019/12/30/dotfiles.html
 
 - `cd ~`
 - `git init`
-- `git remote add origin https://github.com/cbrake/dotfiles.git` (`git@github.com:cbrake/dotfiles.git` if you are cbrake :-) )
+- `git remote add origin https://github.com/cbrake/dotfiles.git`
+  - `git@github.com:cbrake/dotfiles.git` (if you are cbrake :-) )
 - `git fetch`
 - `git status` (will show files that differ, etc)
 - `git reset --hard` (to reset everything to current dotfiles)
